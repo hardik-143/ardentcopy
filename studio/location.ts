@@ -36,7 +36,7 @@ export const locations = {
       ],
     }),
   }),
-  home: defineLocations({
+  homePage: defineLocations({
     select: {
       title: "title",
       slug: "slug.current",

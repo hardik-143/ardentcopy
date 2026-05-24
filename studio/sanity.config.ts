@@ -76,10 +76,10 @@ export default defineConfig({
               "/:slug1/:slug2/:slug3",
               "/:slug1/:slug2/:slug3/:slug4",
             ],
-            resolve: ({ path }) => ({
-              filter: '_type == "page" && slug.current == $path',
-              params: { path },
-            }),
+            resolve: ({ path }) =>
+              path.startsWith("/api/")
+                ? undefined
+                : { filter: '_type == "page" && slug.current == $path', params: { path } },
           },
         ],
       },
