@@ -1,6 +1,3 @@
-import "./utils/env/client";
-import "./utils/env/server";
-
 import type { NextConfig } from "next";
 
 import { env } from "./utils/env/client";

@@ -25,6 +25,7 @@ export default defineConfig({
   icon: Logo,
   projectId,
   dataset,
+  basePath: "/studio",
   releases: {
     enabled: true,
   },
