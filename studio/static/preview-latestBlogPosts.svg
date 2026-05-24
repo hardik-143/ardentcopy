@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <style>
+    :root {
+    --background: #f1f6f6;
+    --foreground: #061414;
+    --card: #e4eded;
+    --card-foreground: #061414;
+    --popover: #f6fbfb;
+    --popover-foreground: #061414;
+    --primary: #006574;
+    --primary-foreground: #f6fbfb;
+    --secondary: #ec6100;
+    --secondary-foreground: #f6fbfb;
+    --muted: #d9e4e4;
+    --muted-foreground: #006574;
+    --accent: #c2e7e1;
+    --accent-foreground: #061414;
+    --destructive: #1f1f1f;
+    --destructive-foreground: #f6fbfb;
+    --border: #b0c2c2;
+    --input: #006574;
+    --ring: #ec6100;
+    --chart-1: #006574;
+    --chart-2: #ec6100;
+    --chart-3: #c2e7e1;
+    --chart-4: #b0c2c2;
+    --chart-5: #1f1f1f;
+    --sidebar: #e4eded;
+    --sidebar-foreground: #061414;
+    --sidebar-primary: #006574;
+    --sidebar-primary-foreground: #f6fbfb;
+    --sidebar-accent: #ec6100;
+    --sidebar-accent-foreground: #f6fbfb;
+    --sidebar-border: #b0c2c2;
+    --sidebar-ring: #ec6100;
+    --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif;
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+    --radius: 0.375rem;
+    --shadow-x: 0px;
+    --shadow-y: 5px;
+    --shadow-blur: 3px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.1;
+    --shadow-color: #000000;
+    --shadow-2xs: 0px 5px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0px 5px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0px 5px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+    --preview-hero-bg: #030d0f;
+    --preview-hero-fg: #e1eaea;
+    --preview-hero-muted: #619b9e;
+    --preview-icon-circle: #04181c;
+    }
+    text {
+      font-family: var(--font-sans), system-ui, sans-serif;
+    }
+  </style>
+  <rect width="320" height="200" rx="6" fill="var(--muted)"/>
+  <text x="20" y="22" fill="var(--foreground)" font-size="11" font-weight="700">Latest from our blog</text>
+  <text x="268" y="22" text-anchor="middle" fill="var(--primary)" font-size="6.5">View all posts ?</text>
+  <rect x="14" y="38" width="90" height="152" rx="8" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="14" y="38" width="90" height="50" rx="8" fill="var(--border)" opacity="0.5"/>
+  <text x="22" y="100" fill="var(--muted-foreground)" font-size="5">Jan 15, 2026</text>
+  <text x="22" y="112" fill="var(--foreground)" font-size="7" font-weight="600">Understanding</text>
+  <text x="22" y="122" fill="var(--foreground)" font-size="7" font-weight="600">Personal Injury</text>
+  <text x="22" y="136" fill="var(--muted-foreground)" font-size="5.5">A guide to navigating</text>
+  <text x="22" y="145" fill="var(--muted-foreground)" font-size="5.5">your legal options after</text>
+  <text x="22" y="154" fill="var(--muted-foreground)" font-size="5.5">an accident...</text>
+  <rect x="114" y="38" width="90" height="152" rx="8" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="114" y="38" width="90" height="50" rx="8" fill="var(--border)" opacity="0.5"/>
+  <text x="122" y="100" fill="var(--muted-foreground)" font-size="5">Jan 8, 2026</text>
+  <text x="122" y="112" fill="var(--foreground)" font-size="7" font-weight="600">What to Do After</text>
+  <text x="122" y="122" fill="var(--foreground)" font-size="7" font-weight="600">a Car Accident</text>
+  <text x="122" y="136" fill="var(--muted-foreground)" font-size="5.5">Steps to protect your</text>
+  <text x="122" y="145" fill="var(--muted-foreground)" font-size="5.5">rights and build a</text>
+  <text x="122" y="154" fill="var(--muted-foreground)" font-size="5.5">strong case...</text>
+  <rect x="214" y="38" width="90" height="152" rx="8" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="214" y="38" width="90" height="50" rx="8" fill="var(--border)" opacity="0.5"/>
+  <text x="222" y="100" fill="var(--muted-foreground)" font-size="5">Dec 20, 2025</text>
+  <text x="222" y="112" fill="var(--foreground)" font-size="7" font-weight="600">Workplace Injury</text>
+  <text x="222" y="122" fill="var(--foreground)" font-size="7" font-weight="600">Rights in Georgia</text>
+  <text x="222" y="136" fill="var(--muted-foreground)" font-size="5.5">Know your rights if</text>
+  <text x="222" y="145" fill="var(--muted-foreground)" font-size="5.5">you've been hurt on</text>
+  <text x="222" y="154" fill="var(--muted-foreground)" font-size="5.5">the job...</text>
+</svg>

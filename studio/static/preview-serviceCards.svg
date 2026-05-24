@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <style>
+    :root {
+    --background: #f1f6f6;
+    --foreground: #061414;
+    --card: #e4eded;
+    --card-foreground: #061414;
+    --popover: #f6fbfb;
+    --popover-foreground: #061414;
+    --primary: #006574;
+    --primary-foreground: #f6fbfb;
+    --secondary: #ec6100;
+    --secondary-foreground: #f6fbfb;
+    --muted: #d9e4e4;
+    --muted-foreground: #006574;
+    --accent: #c2e7e1;
+    --accent-foreground: #061414;
+    --destructive: #1f1f1f;
+    --destructive-foreground: #f6fbfb;
+    --border: #b0c2c2;
+    --input: #006574;
+    --ring: #ec6100;
+    --chart-1: #006574;
+    --chart-2: #ec6100;
+    --chart-3: #c2e7e1;
+    --chart-4: #b0c2c2;
+    --chart-5: #1f1f1f;
+    --sidebar: #e4eded;
+    --sidebar-foreground: #061414;
+    --sidebar-primary: #006574;
+    --sidebar-primary-foreground: #f6fbfb;
+    --sidebar-accent: #ec6100;
+    --sidebar-accent-foreground: #f6fbfb;
+    --sidebar-border: #b0c2c2;
+    --sidebar-ring: #ec6100;
+    --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif;
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+    --radius: 0.375rem;
+    --shadow-x: 0px;
+    --shadow-y: 5px;
+    --shadow-blur: 3px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.1;
+    --shadow-color: #000000;
+    --shadow-2xs: 0px 5px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0px 5px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl:
+    0px 5px 3px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0px 5px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+    --preview-hero-bg: #030d0f;
+    --preview-hero-fg: #e1eaea;
+    --preview-hero-muted: #619b9e;
+    --preview-icon-circle: #04181c;
+    }
+    text {
+      font-family: var(--font-sans), system-ui, sans-serif;
+    }
+  </style>
+  <rect width="320" height="200" rx="6" fill="var(--muted)"/>
+  <text x="160" y="18" text-anchor="middle" fill="var(--foreground)" font-size="11" font-weight="700">Services We Offer</text>
+  <rect x="10" y="28" width="70" height="80" rx="6" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="18" y="34" width="16" height="16" rx="4" fill="var(--muted)"/>
+  <text x="26" y="46" text-anchor="middle" fill="var(--muted-foreground)" font-size="8">🚗</text>
+  <text x="18" y="60" fill="var(--foreground)" font-size="6" font-weight="600">Car Accidents</text>
+  <text x="18" y="70" fill="var(--muted-foreground)" font-size="5">Get compensation for</text>
+  <text x="18" y="78" fill="var(--muted-foreground)" font-size="5">auto injuries</text>
+  <text x="18" y="98" fill="var(--primary)" font-size="5">How We Help ↗</text>
+  <rect x="84" y="28" width="70" height="80" rx="6" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="92" y="34" width="16" height="16" rx="4" fill="var(--muted)"/>
+  <text x="100" y="46" text-anchor="middle" fill="var(--muted-foreground)" font-size="8">🏥</text>
+  <text x="92" y="60" fill="var(--foreground)" font-size="6" font-weight="600">Medical Mal.</text>
+  <text x="92" y="70" fill="var(--muted-foreground)" font-size="5">Holding providers</text>
+  <text x="92" y="78" fill="var(--muted-foreground)" font-size="5">accountable</text>
+  <text x="92" y="98" fill="var(--primary)" font-size="5">How We Help ↗</text>
+  <rect x="158" y="28" width="70" height="80" rx="6" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="166" y="34" width="16" height="16" rx="4" fill="var(--muted)"/>
+  <text x="174" y="46" text-anchor="middle" fill="var(--muted-foreground)" font-size="8">⚠</text>
+  <text x="166" y="60" fill="var(--foreground)" font-size="6" font-weight="600">Work Injuries</text>
+  <text x="166" y="70" fill="var(--muted-foreground)" font-size="5">Protect your rights</text>
+  <text x="166" y="78" fill="var(--muted-foreground)" font-size="5">on the job</text>
+  <text x="166" y="98" fill="var(--primary)" font-size="5">How We Help ↗</text>
+  <rect x="232" y="28" width="70" height="80" rx="6" fill="var(--background)" stroke="var(--border)" stroke-width="0.5"/>
+  <rect x="240" y="34" width="16" height="16" rx="4" fill="var(--muted)"/>
+  <text x="248" y="46" text-anchor="middle" fill="var(--muted-foreground)" font-size="8">⚖</text>
+  <text x="240" y="60" fill="var(--foreground)" font-size="6" font-weight="600">Wrongful Death</text>
+  <text x="240" y="70" fill="var(--muted-foreground)" font-size="5">Justice for families</text>
+  <text x="240" y="78" fill="var(--muted-foreground)" font-size="5">who've lost loved ones</text>
+  <text x="240" y="98" fill="var(--primary)" font-size="5">How We Help ↗</text>
+  <rect x="16" y="118" width="288" height="0.8" fill="var(--border)"/>
+  <text x="16" y="134" fill="var(--foreground)" font-size="7" font-weight="600">Over 50 Case Types, Like:</text>
+  <text x="284" y="134" text-anchor="middle" fill="var(--primary)" font-size="6">View all →</text>
+  <text x="18" y="150" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="28" y="150" fill="var(--muted-foreground)" font-size="5.5">Social Security</text>
+  <text x="92" y="150" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="102" y="150" fill="var(--muted-foreground)" font-size="5.5">Slip &amp; Fall</text>
+  <text x="166" y="150" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="176" y="150" fill="var(--muted-foreground)" font-size="5.5">Dog Bites</text>
+  <text x="240" y="150" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="250" y="150" fill="var(--muted-foreground)" font-size="5.5">Burn Injuries</text>
+  <text x="18" y="163" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="28" y="163" fill="var(--muted-foreground)" font-size="5.5">Truck Accidents</text>
+  <text x="92" y="163" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="102" y="163" fill="var(--muted-foreground)" font-size="5.5">Nursing Home</text>
+  <text x="166" y="163" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="176" y="163" fill="var(--muted-foreground)" font-size="5.5">Product Liability</text>
+  <text x="240" y="163" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="250" y="163" fill="var(--muted-foreground)" font-size="5.5">Premises Liability</text>
+  <text x="18" y="176" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="28" y="176" fill="var(--muted-foreground)" font-size="5.5">Motorcycle</text>
+  <text x="92" y="176" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="102" y="176" fill="var(--muted-foreground)" font-size="5.5">Brain Injuries</text>
+  <text x="166" y="176" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="176" y="176" fill="var(--muted-foreground)" font-size="5.5">Spinal Cord</text>
+  <text x="240" y="176" fill="var(--foreground)" font-size="6">✓</text>
+  <text x="250" y="176" fill="var(--muted-foreground)" font-size="5.5">Insurance Claims</text>
+</svg>

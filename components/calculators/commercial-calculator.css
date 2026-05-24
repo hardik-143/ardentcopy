@@ -1,0 +1,376 @@
+/* All selectors scoped with .ardent-commercial-calc to keep this self-contained
+   and prevent collisions with the rest of the site's styles. */
+
+.ardent-commercial-calc {
+  --teal-dark: #004853;
+  --teal-bg: #d3f0ea;
+  --teal-accent: #00c4c4;
+  --peach: #fcd4b5;
+  --peach-border: #fbbf95;
+  --orange: #fb6900;
+  --field-bg: #e8f0ef;
+  --border: #e5e5e5;
+  --ink: #0b1d23;
+  --muted: #6a6a6a;
+
+  font-family: "Open Sans", -apple-system, sans-serif;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ardent-commercial-calc *,
+.ardent-commercial-calc *::before,
+.ardent-commercial-calc *::after {
+  box-sizing: border-box;
+}
+
+/* ── Outer shell ── */
+.ardent-commercial-calc .calc {
+  max-width: 1080px;
+  margin: 0 auto;
+  border: 1px solid #cce8e4;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ── Header band ── */
+.ardent-commercial-calc .header-band {
+  background: var(--teal-bg);
+  padding: 16px 24px;
+}
+.ardent-commercial-calc .header-band h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+/* ── Intro text ── */
+.ardent-commercial-calc .intro {
+  padding: 14px 24px 16px;
+  font-size: 13px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Sections ── */
+.ardent-commercial-calc .section {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px 20px;
+}
+.ardent-commercial-calc .section-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal-dark);
+  margin-bottom: 16px;
+}
+
+/* ── Two-column grid ── */
+.ardent-commercial-calc .cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* ── Field ── */
+.ardent-commercial-calc .field { margin-bottom: 18px; }
+.ardent-commercial-calc .field:last-child { margin-bottom: 0; }
+
+.ardent-commercial-calc .label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+}
+.ardent-commercial-calc .info-dot {
+  display: inline-flex;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  border: 1.5px solid var(--teal-dark);
+  color: var(--teal-dark);
+  font-size: 9px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  font-style: italic;
+  font-family: Georgia, serif;
+  flex-shrink: 0;
+}
+
+/* ── Numeric stepper ── */
+.ardent-commercial-calc .stepper-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ardent-commercial-calc .stepper {
+  display: flex;
+  flex: 1;
+  background: var(--field-bg);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #c8deda;
+}
+.ardent-commercial-calc .stepper button {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 38px;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--orange);
+  cursor: pointer;
+  transition: background 120ms;
+  flex-shrink: 0;
+}
+.ardent-commercial-calc .stepper button:hover {
+  background: rgba(251, 105, 0, 0.1);
+}
+.ardent-commercial-calc .stepper input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  -moz-appearance: textfield;
+  padding: 0 4px;
+}
+.ardent-commercial-calc .stepper input::-webkit-outer-spin-button,
+.ardent-commercial-calc .stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ardent-commercial-calc .unit {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: pre-line;
+  line-height: 1.3;
+  min-width: 44px;
+}
+
+/* ── Select ── */
+.ardent-commercial-calc select {
+  width: 100%;
+  height: 38px;
+  padding: 0 28px 0 10px;
+  background: var(--field-bg);
+  border: 1px solid #c8deda;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23004853' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* ── Radio list (plain dot style) ── */
+.ardent-commercial-calc .radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ardent-commercial-calc .radio-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.ardent-commercial-calc .radio-list input[type="radio"] {
+  appearance: none;
+  width: 16px; height: 16px;
+  border: 1.5px solid #aaa;
+  border-radius: 50%;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 120ms;
+  background: #fff;
+}
+.ardent-commercial-calc .radio-list input[type="radio"]:checked {
+  border-color: #222;
+  background: #222;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* ── Checkboxes ── */
+.ardent-commercial-calc .check-group { margin-bottom: 16px; }
+.ardent-commercial-calc .check-group:last-child { margin-bottom: 0; }
+.ardent-commercial-calc .check-group .check-label {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal-dark);
+  margin-bottom: 4px;
+}
+.ardent-commercial-calc .check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.ardent-commercial-calc .check-row input[type="checkbox"] {
+  appearance: none;
+  width: 16px; height: 16px;
+  border: 1.5px solid #aaa;
+  border-radius: 2px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 120ms;
+  background: #fff;
+}
+.ardent-commercial-calc .check-row input[type="checkbox"]:checked {
+  background: #222;
+  border-color: #222;
+}
+.ardent-commercial-calc .check-row input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px; top: 0px;
+  width: 5px; height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.ardent-commercial-calc .check-row label { cursor: pointer; }
+
+/* ── Time field visibility ── */
+.ardent-commercial-calc .time-field { margin-top: 16px; }
+.ardent-commercial-calc .hidden { display: none !important; }
+
+/* ── Rough Quote section ── */
+.ardent-commercial-calc .quote-section {
+  padding: 16px 24px 24px;
+}
+.ardent-commercial-calc .quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Quote box (total + range stacked) */
+.ardent-commercial-calc .quote-total {
+  background: var(--teal-dark);
+  color: #fff;
+  padding: 12px 20px 16px;
+}
+.ardent-commercial-calc .quote-total .small-label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ardent-commercial-calc .quote-total .big-amount {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.3px;
+  padding: 4px 0 8px;
+}
+
+.ardent-commercial-calc .quote-range {
+  background: var(--peach);
+  padding: 10px 20px 16px;
+}
+.ardent-commercial-calc .range-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.ardent-commercial-calc .range-header .info-dot {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.ardent-commercial-calc .range-amounts {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 6px 0 2px;
+  color: var(--ink);
+}
+.ardent-commercial-calc .range-amounts .sep {
+  font-weight: 400;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.ardent-commercial-calc .quote-note {
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ── Email section ── */
+.ardent-commercial-calc .email-section {
+  padding: 16px 0 0;
+}
+.ardent-commercial-calc .email-label {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+}
+.ardent-commercial-calc .email-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  background: var(--field-bg);
+  border: 1px solid #c8deda;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  margin-bottom: 12px;
+}
+.ardent-commercial-calc .email-input::placeholder { color: #aaa; }
+.ardent-commercial-calc .send-btn {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 24px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 140ms;
+}
+.ardent-commercial-calc .send-btn:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .ardent-commercial-calc .cols,
+  .ardent-commercial-calc .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ardent-commercial-calc .quote-total .big-amount { font-size: 26px; }
+  .ardent-commercial-calc .range-amounts { font-size: 22px; }
+}
