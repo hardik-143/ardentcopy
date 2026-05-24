@@ -2,17 +2,29 @@ import { env } from "@/utils/env/client";
 import type { PortableTextBlock } from "next-sanity";
 import slugify from "slugify";
 
-export const getBaseUrl = () => {
-  if (env.NEXT_PUBLIC_VERCEL_ENV === "production") {
-    return env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL;
-  }
+const getRuntimeEnv = (key: string) =>
+  typeof process === "undefined" ? undefined : process.env[key];
 
-  if (env.NEXT_PUBLIC_VERCEL_ENV === "preview") {
-    return env.NEXT_PUBLIC_VERCEL_URL;
-  }
-
-  return "http://localhost:3000";
+const normalizeBaseUrl = (url: string) => {
+  const urlWithProtocol = /^https?:\/\//.test(url) ? url : `https://${url}`;
+  return urlWithProtocol.replace(/\/$/, "");
 };
+
+const getVercelPreviewUrl = () => {
+  if (getRuntimeEnv("VERCEL_ENV") !== "preview") {
+    return;
+  }
+
+  const previewUrl =
+    getRuntimeEnv("VERCEL_BRANCH_URL") ?? getRuntimeEnv("VERCEL_URL");
+
+  return previewUrl ? normalizeBaseUrl(previewUrl) : undefined;
+};
+
+export const getBaseUrl = () =>
+  getVercelPreviewUrl() ?? normalizeBaseUrl(env.NEXT_PUBLIC_BASE_URL);
+
+export const BASE_URL = getBaseUrl();
 
 export const isRelativeUrl = (url: string) =>
   url.startsWith("/") || url.startsWith("#") || url.startsWith("?");

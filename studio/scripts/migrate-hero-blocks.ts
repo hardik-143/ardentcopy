@@ -2,17 +2,17 @@
  * Migrates pageBuilder blocks from old hero/hero2 _type to heroPrimary/heroSecondary.
  * Run from studio: pnpm exec sanity exec scripts/migrate-hero-blocks.ts --with-user-token
  *
- * Requires SANITY_STUDIO_PROJECT_ID and SANITY_STUDIO_DATASET (or default "production").
+ * Requires NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET (or default "production").
  */
 import { getCliClient } from "sanity/cli";
 
 const client = getCliClient();
 
-const PROJECT_ID = process.env.SANITY_STUDIO_PROJECT_ID ?? "";
-const DATASET = process.env.SANITY_STUDIO_DATASET ?? "production";
+const PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
+const DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 
 if (!PROJECT_ID) {
-  console.error("Missing SANITY_STUDIO_PROJECT_ID");
+  console.error("Missing NEXT_PUBLIC_SANITY_PROJECT_ID");
   process.exit(1);
 }
 

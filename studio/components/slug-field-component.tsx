@@ -16,7 +16,8 @@ import { ErrorStates } from "@studio/components/url-slug/error-states";
 import { useSlugValidation } from "@studio/hooks/use-slug-validation";
 import { generateSlugFromTitle } from "@studio/utils/slug-validation";
 
-const presentationOriginUrl = process.env.SANITY_STUDIO_PRESENTATION_URL;
+const presentationOriginUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
 // Styled components
 const CopyButton = styled(Button)`

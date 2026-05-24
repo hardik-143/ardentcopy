@@ -9,8 +9,7 @@
  *
  * Idempotent: deterministic _ids written with createOrReplace.
  *
- * Reads SANITY_PROJECT_ID / SANITY_DATASET (preferred) or falls back to the
- * studio's SANITY_STUDIO_PROJECT_ID / SANITY_STUDIO_DATASET vars.
+ * Reads NEXT_PUBLIC_SANITY_PROJECT_ID / NEXT_PUBLIC_SANITY_DATASET.
  */
 import { randomUUID } from "node:crypto";
 import { getCliClient } from "sanity/cli";
@@ -22,16 +21,12 @@ import {
 
 const client = getCliClient();
 
-const PROJECT_ID =
-  process.env.SANITY_PROJECT_ID ?? process.env.SANITY_STUDIO_PROJECT_ID ?? "";
-const DATASET =
-  process.env.SANITY_DATASET ??
-  process.env.SANITY_STUDIO_DATASET ??
-  "production";
+const PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
+const DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 
 if (!PROJECT_ID) {
   console.error(
-    "Missing SANITY_PROJECT_ID (or SANITY_STUDIO_PROJECT_ID). Aborting."
+    "Missing NEXT_PUBLIC_SANITY_PROJECT_ID. Aborting."
   );
   process.exit(1);
 }

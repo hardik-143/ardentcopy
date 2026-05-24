@@ -84,7 +84,7 @@ const BLOCK_COMPONENTS = {
 function createSanityDataAttribute(config: SanityDataAttributeConfig): string {
   return createDataAttribute({
     id: config.id,
-    baseUrl: env.NEXT_PUBLIC_SANITY_STUDIO_URL,
+    baseUrl: "/studio",
     projectId: env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     dataset: env.NEXT_PUBLIC_SANITY_DATASET,
     type: config.type,

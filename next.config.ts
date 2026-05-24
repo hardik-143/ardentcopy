@@ -9,18 +9,6 @@ import { queryRedirects } from "./utils/sanity/query";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  // Expose SANITY_STUDIO_* vars to the browser when studio is embedded in Next.js,
-  // since only NEXT_PUBLIC_* vars are available client-side by default.
-  env: {
-    SANITY_STUDIO_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "",
-    SANITY_STUDIO_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production",
-    SANITY_STUDIO_TITLE: process.env.SANITY_STUDIO_TITLE ?? "",
-    SANITY_STUDIO_PRESENTATION_URL:
-      process.env.SANITY_STUDIO_PRESENTATION_URL ??
-      process.env.NEXT_PUBLIC_SANITY_PRESENTATION_URL ??
-      process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ??
-      "http://localhost:3000",
-  },
   experimental: {
     inlineCss: true,
   },

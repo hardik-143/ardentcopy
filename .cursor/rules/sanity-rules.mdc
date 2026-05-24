@@ -60,7 +60,6 @@ This is a rough idea of how to structure folders and files, ensuring you always 
     │   │   ├── schema.json
     │   │   ├── structure.ts
     │   │   ├── tsconfig.json
-    │   │   ├── .env.example
     │   │   ├── .gitignore
     │   │   ├── components/
     │   │   │   ├── logo.tsx

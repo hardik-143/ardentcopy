@@ -8,6 +8,7 @@ import {
   getPublishedId,
   type SlugValue,
   useEditState,
+  useWorkspace,
 } from "sanity";
 import { useRouter } from "sanity/router";
 
@@ -36,6 +37,7 @@ export const presentationUrl = definePlugin(() => ({
           const doc = useEditState(publishedId, documentType);
           const router = useRouter();
           const toast = useToast();
+          const { basePath } = useWorkspace();
           const slug = getDocumentSlug(doc?.draft, doc?.published);
           const handlePresentationOpen = useCallback(() => {
             if (!slug) {
@@ -46,10 +48,13 @@ export const presentationUrl = definePlugin(() => ({
               });
               return;
             }
+            const base = basePath.endsWith("/")
+              ? basePath.slice(0, -1)
+              : basePath;
             router.navigateUrl({
-              path: `/presentation?preview=${encodeURIComponent(slug)}`,
+              path: `${base}/presentation?preview=${encodeURIComponent(slug)}`,
             });
-          }, [slug, toast, router]);
+          }, [slug, toast, router, basePath]);
 
           return {
             type: "action" as const,

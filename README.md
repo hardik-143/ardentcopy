@@ -52,17 +52,10 @@ pnpm install
 
 ### 3. Create Environment Files
 
-Create the `.env` files first so you have somewhere to paste credentials:
+Create the `.env` file first so you have somewhere to paste credentials:
 
 ```shell
-# Web app
 cp .env.example .env
-
-# Studio
-cp studio/.env.example studio/.env
-
-# Shared Sanity utilities
-cp utils/sanity/.env.example utils/sanity/.env
 ```
 
 ### 4. Create a New Sanity Project
@@ -74,7 +67,7 @@ cp utils/sanity/.env.example utils/sanity/.env
 3. Name your project (e.g., "Client Name Website")
 4. Select **"Create empty project"** (or use a starter if preferred)
 5. Create a dataset named `production`
-6. Copy the **Project ID** and paste it into the `.env` files
+6. Copy the **Project ID** and paste it into `.env`
 
 ### 5. Generate API Tokens
 
@@ -91,35 +84,16 @@ From your Sanity project dashboard, go to **API** → **Tokens** and create:
 **`.env`**:
 
 ```env
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2025-08-29
-NEXT_PUBLIC_SANITY_STUDIO_URL=http://localhost:3333
 
 SANITY_API_READ_TOKEN=your-live-preview-token
 SANITY_API_WRITE_TOKEN=your-app-write-token
 
 # Optional: Google Tag Manager
 NEXT_PUBLIC_GTM_ID=
-```
-
-**`studio/.env`**:
-
-```env
-SANITY_STUDIO_PROJECT_ID=your-project-id
-SANITY_STUDIO_DATASET=production
-SANITY_STUDIO_TITLE="Client Name Studio"
-SANITY_STUDIO_PRESENTATION_URL=http://localhost:3000
-SANITY_STUDIO_PRODUCTION_HOSTNAME=client-name
-```
-
-**`utils/sanity/.env`**:
-
-```env
-SANITY_STUDIO_PROJECT_ID=your-project-id
-SANITY_STUDIO_DATASET=production
-SANITY_STUDIO_TITLE="Client Name Studio"
-SANITY_STUDIO_PRESENTATION_URL=http://localhost:3000
 ```
 
 ### 7. Configure Client-Specific Values
@@ -163,11 +137,10 @@ Configure these GitHub repository secrets:
 | Secret                              | Description                                                        |
 | ----------------------------------- | ------------------------------------------------------------------ |
 | `SANITY_DEPLOY_TOKEN`               | Deploy Token (Deploy Studio permissions)                           |
-| `SANITY_STUDIO_PROJECT_ID`          | Your Sanity project ID                                             |
-| `SANITY_STUDIO_DATASET`             | Dataset name (usually `production`)                                |
-| `SANITY_STUDIO_TITLE`               | Studio title shown in browser                                      |
-| `SANITY_STUDIO_PRESENTATION_URL`    | Your deployed web app URL                                          |
-| `SANITY_STUDIO_PRODUCTION_HOSTNAME` | Studio subdomain (e.g., `my-client` for `my-client.sanity.studio`) |
+| `NEXT_PUBLIC_BASE_URL`              | Deployed web app origin, e.g. `https://example.com`                 |
+| `NEXT_PUBLIC_SANITY_PROJECT_ID`     | Your Sanity project ID                                             |
+| `NEXT_PUBLIC_SANITY_DATASET`        | Dataset name (usually `production`)                                |
+| `NEXT_PUBLIC_SANITY_API_VERSION`    | Sanity API version                                                 |
 
 Or deploy manually:
 

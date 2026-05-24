@@ -3,7 +3,7 @@
  * Run from repo root: pnpm exec sanity exec studio/scripts/patch-location-pages-pagebuilder.ts --with-user-token --project=4uxdyxv3 --dataset=production
  * Or from studio: pnpm exec sanity exec scripts/patch-location-pages-pagebuilder.ts --with-user-token
  *
- * Requires SANITY_STUDIO_PROJECT_ID and SANITY_STUDIO_DATASET (or pass --project and --dataset).
+ * Requires NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET (or pass --project and --dataset).
  */
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
