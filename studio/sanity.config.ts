@@ -18,6 +18,15 @@ import { structure } from "./structure";
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 const title = process.env.NEXT_PUBLIC_SANITY_STUDIO_TITLE ?? "Studio";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+
+const presentationInitialUrl = ({ origin }: { origin: string }) => {
+  const studioUrl = new URL(origin);
+  const isStandaloneStudio =
+    studioUrl.hostname.endsWith(".sanity.studio") || studioUrl.port === "3333";
+
+  return isStandaloneStudio ? baseUrl : origin;
+};
 
 export default defineConfig({
   name: "default",
@@ -36,10 +45,48 @@ export default defineConfig({
     presentationTool({
       resolve: {
         locations,
+        mainDocuments: [
+          {
+            route: "/",
+            type: "homePage",
+          },
+          {
+            route: "/blog",
+            type: "blogIndex",
+          },
+          {
+            route: "/careers",
+            type: "careersIndex",
+          },
+          {
+            route: "/glossary",
+            type: "glossaryIndex",
+          },
+          {
+            route: "/blog/:slug",
+            resolve: ({ path }) => ({
+              filter: '_type == "blog" && slug.current == $path',
+              params: { path },
+            }),
+          },
+          {
+            route: [
+              "/:slug",
+              "/:slug1/:slug2",
+              "/:slug1/:slug2/:slug3",
+              "/:slug1/:slug2/:slug3/:slug4",
+            ],
+            resolve: ({ path }) => ({
+              filter: '_type == "page" && slug.current == $path',
+              params: { path },
+            }),
+          },
+        ],
       },
       previewUrl: {
+        initial: presentationInitialUrl,
         previewMode: {
-          enable: "/api/presentation-draft",
+          enable: "/api/draft-mode/enable",
         },
       },
     }),
