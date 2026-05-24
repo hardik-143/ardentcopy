@@ -148,8 +148,8 @@ importers:
         specifier: 2.3.8
         version: 2.3.8
       '@sanity/blueprints':
-        specifier: 0.10.0
-        version: 0.10.0
+        specifier: 0.18.0
+        version: 0.18.0
       '@tailwindcss/postcss':
         specifier: ^4.1.18
         version: 4.3.0
@@ -2680,10 +2680,6 @@ packages:
   '@sanity/blueprints-parser@0.4.0':
     resolution: {integrity: sha512-zsWRKubWZnRwuAnRUC4UqeIJg6SpIrz6ft20FzfhI2mAqaxPky8rFh18/x96+5HpNv5ww/B9zU359IJCJMWNkw==}
     engines: {node: '>=20.19 <22 || >=22.12'}
-
-  '@sanity/blueprints@0.10.0':
-    resolution: {integrity: sha512-TweEjiarTWY8Bj3JCpcN0RFz1fdanFPpVEH955KWJGqCCKY3EnyOuv3oEctX4sPAuz1C3xpp3X8D0HhaG+6MEQ==}
-    engines: {node: '>=20'}
 
   '@sanity/blueprints@0.18.0':
     resolution: {integrity: sha512-iEFEDtfBt12PiMbqmI4khLVvAhsYDX7OCLnfQ8OvgbhZzrzjsDDzAIrAOoXNmAfW/CgkUMG9qdYqhu1aTAI0dg==}
@@ -8820,8 +8816,6 @@ snapshots:
       rxjs: 7.8.2
 
   '@sanity/blueprints-parser@0.4.0': {}
-
-  '@sanity/blueprints@0.10.0': {}
 
   '@sanity/blueprints@0.18.0': {}
 
